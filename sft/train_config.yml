@@ -1,0 +1,33 @@
+data_path_train: nguyentatdat/sft-train-2k
+data_path_eval: nguyentatdat/sft-eval-2k
+model_name: Qwen/Qwen2.5-32B-Instruct
+#model_name: meta-llama/Llama-3.1-8B-Instruct
+#huggingface_access_key: 
+huggingface_access_key: 
+#huggingface_access_key: 
+#wandb_access_key: 
+wandb_access_key: 
+wandb_project: Llama-Lora
+cache_dir: /data2/cmdir/home/ioit107/nmquy/hf_cache
+system_prompt: "You are an expert in the field of education and must provide accurate, fact-based answers in Vietnamese. If a question is beyond your knowledge or you cannot provide a reliable answer, respond with 'Tôi không biết.' Every answer you provide must be based on the reference text provided."
+output_path: "output/"
+save_path: "save_model/"
+num_train_epochs: 10
+evaluation_strategy: "epoch"
+train_batch_size: 8
+eval_batch_size: 8
+warmup_steps: 20
+gradient_accumulation_steps: 2
+gradient_checkpointing: True
+learning_rate: 0.00002
+deepspeed: ds_config.json
+save_strategy: epoch
+eval_strategy: epoch
+weight_decay: 0.001
+lr_scheduler_type: linear
+logging_strategy: steps
+logging_steps: 10
+log_level: info
+push_to_hub: False
+hub_model_id: ""
+dataset_text_field: text

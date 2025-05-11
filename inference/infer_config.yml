@@ -1,0 +1,29 @@
+data_path: "qxuanson/test_339_mau_test_quy_che"
+#data_path: nguyentatdat/sft-train-2k
+#huggingface_access_key: 
+#model_name: /data2/cmdir/home/ioit107/thviet/SFT/output/Llama-3.1-8B-Instruct_output_edu_2025-04-14_21-42/checkpoint-124
+#model_name: /data2/cmdir/home/ioit107/thviet/SFT/save_model/Llama-3.1-8B-Instruct_save_model_pretrain_2025-04-16_02-24
+#model_name: Qwen/Qwen2.5-7B-Instruct
+#model_name: meta-llama/Llama-3.1-8B-Instruct
+model_name: Qwen/Qwen2.5-32B-Instruct
+base_model: Qwen/Qwen2.5-32B-Instruct
+#base_model: meta-llama/Llama-3.1-8B-Instruct
+#base_model: Qwen/Qwen2.5-7B-Instruct
+huggingface_access_key: 
+cache_dir: /data2/cmdir/home/ioit107/nmquy/hf_cache
+device: cuda
+path_filename: "/data2/cmdir/home/ioit107/thviet/inference/output/llama_finetuned_version_CoT_usercontext"
+#path_filename: "/data2/cmdir/home/ioit107/thviet/inference/output/test_llama_base_with_no_ref_no_finetune"
+#path_filename: "/data2/cmdir/home/ioit107/thviet/inference/output/test_qwen_base_with_ref_no_finetune"
+#path_filename: "/data2/cmdir/home/ioit107/thviet/inference/output/test_llama_base_with_ref_no_finetune"
+#path_filename: "/data2/cmdir/home/ioit107/thviet/inference/output/test_qwen_base_with_ref"
+#path_filename: "/data2/cmdir/home/ioit107/thviet/inference/output/test_llama_base_with_ref"
+#system_prompt: "You are an expert in the field of education and must provide accurate, fact-based answers in Vietnamese. If a question is beyond your knowledge or you cannot provide a reliable answer, respond with 'Tôi không biết.' Every answer you provide must be based on the reference text provided."
+#system_prompt: "Bạn là một trợ lý chuyên cung cấp thông tin về Đại học Quốc gia Hà Nội (VNU) trong lĩnh vực giáo dục. Mọi câu trả lời phải chính xác, dựa trên dữ liệu và thông tin đã được kiểm chứng. Nếu gặp câu hỏi nằm ngoài phạm vi hiểu biết hoặc không thể đưa ra câu trả lời đáng tin cậy, hãy trả lời: “Tôi không biết.” Tất cả câu trả lời phải được trình bày bằng tiếng Việt."
+#system_prompt: "You are an assistant specializing in providing information about Vietnam National University (VNU) in the fields of admissions and academic training. Every answer you provide must be based on the CONTEXT provided. If a QUESTION is beyond your knowledge or you cannot provide a reliable answer, respond with 'Tôi không biết.'. The answer must be in Vietnamese "
+system_prompt: 'You are a helpful assistant. You must answer the QUESTION below based solely on the CONTEXT provided. Every response must be complete, accurate, and grounded in the given information. If the QUESTION is outside your knowledge or the CONTEXT does not contain enough information to answer reliably, reply with "Tôi không biết". Always answer in Vietnamese.'
+max_new_token: 1024
+temperature: 0.0
+top_p: 0.95
+top_k: 40
+repetition_penalty: 1.5
